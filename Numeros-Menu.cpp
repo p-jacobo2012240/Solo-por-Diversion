@@ -78,6 +78,23 @@ int main(){
 		
 	}while( opcion != 3);
 	
+	/*
+	<?php
+
+$dbHost = 'localhost';
+$dbName = 'db1';
+$dbUser = 'root';
+$dbPassword = '';
+
+try{
+    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPassword);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION); 
+}catch(Exception $e){
+    echo $e->getMessage();
+}
+?>
+	
+	*/
 	
 	//Este es un demo de lo que hay que hacer
 	cout<<"HOLA XD"<<endl;

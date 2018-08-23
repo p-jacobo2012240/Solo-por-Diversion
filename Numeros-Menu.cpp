@@ -5,7 +5,15 @@ using namespace std;
 
 void calculadora_simple(){
 	
+	int numero_uno = 0;
+	//int numero_dos = 0;
+	cout<<"INGRESE NUMERO XD"<<endl;
+	cin>>numero_uno;
 	
+	for( int i; i<10; i ++ ){
+		
+		cout<<numero_uno<<"X"<<i<<" = "<< numero_uno * i <<endl;
+	}
 	
 }
 
@@ -25,15 +33,16 @@ int main(){
 	cout <<"|  Opcion #6  --- Calificacion            |"<<endl;
 	cout <<"|  Opcion #7  --- Salir                   |"<<endl;
 	cout <<"==========================================="<<endl;
-	cout <<"|>   Ingrese alguna opcion del menu:   <|"<<endl;
-	cout <<"========================================="<<endl;
+	cout <<"|>   Ingrese alguna opcion del menu:     <|"<<endl;
+	cout <<"==========================================="<<endl;
 	cin  >> opcion ;
 	
 		switch( opcion ){ 
 			
 			case 1:
 				
-				cout<<"ha seleccionado 1"<<endl;
+				//cout<<"ha seleccionado 1"<<endl;
+				calculadora_simple();
 			
 			break;
 			
@@ -77,24 +86,7 @@ int main(){
 		
 		
 	}while( opcion != 3);
-	
-	/*
-	<?php
 
-$dbHost = 'localhost';
-$dbName = 'db1';
-$dbUser = 'root';
-$dbPassword = '';
-
-try{
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPassword);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION); 
-}catch(Exception $e){
-    echo $e->getMessage();
-}
-?>
-	
-	*/
 	
 	//Este es un demo de lo que hay que hacer
 	cout<<"HOLA XD"<<endl;

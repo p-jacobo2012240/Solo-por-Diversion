@@ -12,7 +12,7 @@ void calculadora_simple(){
 
 int main(){
 	
-	int opcion = 0 ;
+	int opcion = 0; 
 	
 	do{
 		
@@ -29,7 +29,7 @@ int main(){
 	cout <<"========================================="<<endl;
 	cin  >> opcion ;
 	
-		switch( opcion){ 
+		switch( opcion ){ 
 			
 			case 1:
 				
@@ -49,16 +49,35 @@ int main(){
 				
 			break;
 			
-			default:
-				cout<<"Seleccione una opcion Valida"<<endl;	
+			case 4:
+				cout<<"ha seleccionado 4"<<endl;
+			break;
 			
+			case 5:
+				cout<<"ha seleccionado 5"<<endl;
+			break;
+			
+			case 6:
+				cout<<"ha seleccionado 7"<<endl;	
+			break;
+			
+			case 7:
+				cout<<"Ha salido del programa :( "<<endl;
+				exit(0); //Saliendo del programa
+			
+			break;	
+			
+			default:
+				cout<<endl;
+				cout<<"==============================="<<endl;
+				cout<<"| Seleccione una opcion Valida |"<<endl;	
+				cout<<"==============================="<<endl;
+				cout<<endl;
 		}
 		
 		
 	}while( opcion != 3);
 	
-	
-	cout<<
 	
 	//Este es un demo de lo que hay que hacer
 	cout<<"HOLA XD"<<endl;

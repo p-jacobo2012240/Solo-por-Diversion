@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath> 
 
 using namespace std;
 
@@ -20,6 +21,7 @@ void calculadora_simple(){
 	cout<<" (RESTA) -  "<<endl;
 	cout<<" (MULT)  *  "<<endl;
 	cout<<" (DIVI)  /  "<<endl;
+	cout<<" (EXPO)  ^  "<<endl;
 	cout<<"Ingrese su signo: "<<endl;
 	cin>>opcion;
 	
@@ -48,15 +50,18 @@ void calculadora_simple(){
 		case '/':
 			total = numero_uno / numero_dos;
 			cout<<"Su total de la Division es:"<<total<<endl;	
-		break;	
-			
+		break;
+		
+		case '^':
+			total = pow(numero_uno, numero_dos);	
+			cout<<"Su total de elevar ambos numeros es:"<<total<<endl;
+		break;
 		
 		default:
 			cout<<"Operacion invalida"<<endl; 
 		
 	}
-	
-	
+		
 }
 
 void conversion(){
@@ -68,55 +73,140 @@ void conversion(){
 
 void mes_actual(){
 	
-	int mes_actual = 0;
+	int mes_actual = 0 ;
 	
-	cout <<"|--  Seleccione su mes                  --|"<<endl;
-	cout <<"|    Tenga en cuanta que va de 1 a 12     |"<<endl; 	
+	cout<<"==========================================="<<endl; 
+	cout<<"|--      Seleccione su mes              --|"<<endl;
+	cout<<"|    Tenga en cuanta que va de 1 a 12     |"<<endl;
+	cout<<"==========================================="<<endl; 	
 	cin>>mes_actual;
 	
 	switch( mes_actual ){
 		
-		case 1:
+		case 01:
 			cout<<"Ha elegido enero"<<endl;
 		break;
 		
-		case 2:
+		case 02:
 			cout<<"Ha elegido Febrero"<<endl;
 		break;
 		
-		case 3:
+		case 03:
 			cout<<"Ha elegido marzo"<<endl;
 		break;
 		
-		case 4:
-			cout<<"Ha elegido abril"<<endl;
+		case 04:
+			cout<<"Ha elegido Abril"<<endl;
 		break;
 		
-		case 5:
+		case 05:
 			cout<<"Ha elegido mayo"<<endl;
 		break;
 		
-		case 6:
-			cout<<"Ha elegido junio"<<endl;
+		case 06:
+			cout<<"Ha elegido Junio"<<endl;
 		break;
 		
-		case 7:
-			cout<<"Ha elegido julio"<<endl;
+		case 07:
+			cout<<"Ha elegido Julio"<<endl;
 		break;
 		
+		case 8:   //Esto no me lo reconoce como un 08 sino solo 8
+			cout<<"Ha elegido Agosto"<<endl;
+		break;
+		
+		case 9:   //Esto no me lo reconoce como un 09 sino solo 9 
+			cout<<"Ha elegido Septiembre"<<endl;
+		break;
+		
+		case 10:
+			cout<<"Ha elegido Octubre"<<endl;
+		break;
+		
+		case 11:
+			cout<<"Ha elegido Noviembre"<<endl;
+		break;
+		
+		case 12:
+			cout<<"Ha elegido Diciembre"<<endl;
+		break;		
+			
 		default:
 			cout<<"Opcion invalida"<<endl;
-		break;							
+						
 		
 	}
-	
-	
-	
+					
 }
 
 void n_romano(){
 	
-	cout<<"esta es la funcion de n a romano "<<endl;
+	//cout<<"esta es la funcion de n a romano "<<endl;
+	int numero = 0;
+	int u, d, c, m;
+	int total =0;
+	
+		
+	cout<<"Ingrese su numero a convertir en romano"<<endl;
+	cin>>numero;
+	
+	if( (numero<1) || (numero>999)){
+		cout<<"El numero no es un valido"<<endl;
+	}else{
+		
+		//Unidades
+		if(numero>=1){             
+		 	cout<<"I"<<endl;
+			numero=numero-1; 
+		}
+		//Decenas
+		if(numero>=10){
+			cout<<
+			
+		}
+		
+		/*
+		  if(x>=900)   {cout<<"CM"   ;x=x-900; }
+        if(x>=500)   {cout<<"D"    ;x=x-500; }
+        if(x>=400)   {cout<<"CD"   ;x=x-400; }
+        if(x>=300)   {cout<<"C"    ;x=x-100; }
+        if(x>=200)   {cout<<"C"    ;x=x-100; }
+        if(x>=100)   {cout<<"C"    ;x=x-100; }
+        if(x>=90)    {cout<<"XC"   ;x=x-90;  }
+        if(x>=50)    {cout<<"L"    ;x=x-50;  }
+        if(x>=40)    {cout<<"XL"   ;x=x-40;  }
+        if(x>=30)    {cout<<"X"    ;x=x-10;  }
+        if(x>=20)    {cout<<"X"    ;x=x-10;  }
+        if(x>=10)    {cout<<"X"    ;x=x-10;  }
+        if(x>=9) {cout<<"IX"   ;x=x-9;   }
+        if(x>=5) {cout<<"V"    ;x=x-5;   }
+        if(x>=4) {cout<<"IV"   ;x=x-4;   }
+        if(x>=3) {cout<<"III";x=x-3;     }
+        if(x>=2) {cout<<"II"   ;x=x-2;   }
+        if(x>=1) {cout<<"I"    ;x=x-1;   }
+		
+		*/
+		
+		
+	}
+	
+	/*if(numero == 1){
+		cout<<"I"<<endl;
+	}*/
+	
+	/*switch( u ){
+		
+		case 1:
+			total = u;
+			cout<<"I"<<total<<endl;
+		break;
+		
+		default:
+			cout<<"El numero no existe o no es recinocido"<<endl;	
+		
+	}*/
+	
+	
 	
 }
 
@@ -205,22 +295,19 @@ int main(){
 		switch( opcion ){ 
 			
 			case 1:
-				
-				//cout<<"ha seleccionado 1"<<endl;
+							
 				calculadora_simple();
 			
 			break;
 			
 			case 2:
 				
-				//cout<<"ha seleccionado 2"<<endl;
 				conversion();
 			
 			break;
 			
 			case 3:
 				
-				//cout<<"ha seleccionado 3"<<endl;
 				mes_actual();
 				
 			break;
@@ -228,20 +315,19 @@ int main(){
 			case 4:
 				
 				n_romano();
-				//cout<<"ha seleccionado 4"<<endl;
-				
+							
 			break;
 			
 			case 5:
 				
 				romano_n();
-				//cout<<"ha seleccionado 5"<<endl;
+				
 			break;
 			
 			case 6:
 				
 				calificacion();
-				//cout<<"ha seleccionado 7"<<endl;	
+					
 			break;
 			
 			case 7:
@@ -259,10 +345,11 @@ int main(){
 		}
 		
 		
-	}while( opcion != 3);
+	}while( opcion != 7);
 
 	
 	//Este es un demo de lo que hay que hacer
 	cout<<"HOLA XD"<<endl;
+	
 	return 0;
 }

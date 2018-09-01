@@ -364,6 +364,10 @@ int main(){
 	do{
 		
 	cout <<"==========================================="<<endl;
+	cout <<"| Nombre: Pablo Daniel Jacobo Sanchez     |"<<endl;
+	cout <<"| Carnet: 9490-18-1319                    |"<<endl;
+	cout <<"| Curso:  Algoritmos                      |"<<endl;
+	cout <<"==========================================="<<endl;
 	cout <<"|  Opcion #1  -- Calculadora Simple       |"<<endl;
 	cout <<"|  Opcion #2  --- Conversion de Monedas   |"<<endl; 	
 	cout <<"|  Opcion #3  --- Mes Actual              |"<<endl;

@@ -35,6 +35,15 @@ int producto(int a, int b){
 	
 }
 
+//Division Entera  
+int division_entera(int dividendo, int divisor){
+	if( dividendo < divisor ){ //Caso base
+		return 0;
+	}
+	//caso general
+	return 1 + division_entera( dividendo - divisor, divisor );
+}
+
 
 int main(){
 	
@@ -42,5 +51,5 @@ int main(){
 	cout<<"Ingrese el numero de a aumentaar"<<endl;
 	cin>>op;
 	op = piramide(op);
-	//producto(10, 2 );
+	//cout<<division_entera(13, 4)<<endl;
 }

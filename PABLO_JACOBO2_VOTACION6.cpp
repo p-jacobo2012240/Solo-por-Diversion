@@ -1,5 +1,6 @@
 #include <iostream> 
 #define LIMITE 2
+#define MAGIC_NUMBER 3
 
 using namespace std;
 
@@ -8,6 +9,7 @@ float operativa(){
 	int opcion   = 0;
 	string n_a, n_b, n_c;
 	int totx, totb, totc;
+	int res_a, res_b, res_c;
 	//Arrays votos
 	int votos_a[5];
 	int votos_b[5];
@@ -83,9 +85,7 @@ float operativa(){
 					total_c[i] = votos_c[0] + votos_c[1] +  votos_c[2];
 					totc = total_c[i]; 
 				}
-					/*cout<<"total fuera"<<totx<<endl;
-					cout<<"Total b"<<totb<<endl;
-					cout<<"Toto C"<<totc<<endl;*/
+					
 				
 				cout<<"---------------------------------------------------------------------"<<            endl;
   				cout<<"|  Departamentro |Candidato A   | Candidato B  |  Candidato C       |"<<            endl;
@@ -95,7 +95,28 @@ float operativa(){
 				cout<<"    "<<" No: 3 "<<"    "<<"       " << votos_a[2] <<"             "<<  votos_b[2] <<"               "<< votos_c[2] <<endl;	
 				cout<<"---------------------------------------------------------------------"<<endl;
 				cout<<"    "<<" Totales "<<"    "<<"     " << totx <<"             "<< totb <<"               "<< totc <<endl;		
-				cout<<"---------------------------------------------------------------------"<<endl;	
+				cout<<"---------------------------------------------------------------------"<<endl;
+				cout<<"    "<<" Porcentajes "<<"    "<<"     " << totx / MAGIC_NUMBER <<"             "<< totb / MAGIC_NUMBER <<"               "<< totc / MAGIC_NUMBER <<endl;	
+				cout<<"---------------------------------------------------------------------"<<endl;
+				//Comparando ganador
+				if( (totx>totb) && (totx>totc)){
+					//el primero es ganador
+					res_a = totx;
+					cout<<"Gano por la cantidad de: "<< res_a<<endl;		
+				}else if( (totb>totx) && (totb>totc)){
+					//el segundo es ganador
+					res_b = totb;
+					cout<<"Gano por la cantidad de: "<< res_b<<endl;
+				}else{
+					//el tercero es ganador
+					res_c = totc;
+					cout<<"Gano por la cantidad de: "<< res_c<<endl;
+				}
+				cout<<"---------------------------------------------------------------------"<<endl;
+				cout<<"    "<<" Candidato ganador: "<<endl;		
+				cout<<"---------------------------------------------------------------------"<<endl;
+				
+			
 			break;				
 			
 				default:

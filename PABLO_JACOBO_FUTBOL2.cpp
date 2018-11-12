@@ -23,11 +23,15 @@ using namespace std;
 	string n_camiseta_b;	
 	
 	do{
+		cout<<"Carnet --> 9490-18-1319"<<endl;
+		cout<<"Nombre --> Pablo Daniel Jacobo Sanchez"<<endl;
+		cout<<"Seccion --> D"<<endl;
+		cout<<""<<endl;	
 		cout<<"Asigne sus jugadores a sus equipos preferidos 12 es recomendado"<<endl;
 		cout<<"1. Ingreso de jugadores a equipo Coders"<<endl;
 		cout<<"2. Ingreso de jugadores a equipo Graphqlitos"<<endl;
 		cout<<"3. Mostrar Jugadores de Coders"<<endl;
-		cout<<"3. Mostrar Jugadores de  Graphqlitos"<<endl;
+		cout<<"4. Mostrar Jugadores de  Graphqlitos"<<endl;
 		cin>> op;	
 		
 		switch(op){

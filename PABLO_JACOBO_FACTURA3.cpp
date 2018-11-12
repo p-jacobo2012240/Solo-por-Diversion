@@ -19,7 +19,11 @@ float factura(){
 	int limitArt[5];
 	
 	do{
-	
+		
+		cout<<"Carnet --> 9490-18-1319"<<endl;
+		cout<<"Nombre --> Pablo Daniel Jacobo Sanchez"<<endl;
+		cout<<"Seccion --> D"<<endl;
+		cout<<""<<endl;	
 		cout<<"   Ingrese su factura      "<<endl;
 		cout<<"   1. Para ingresar Datos  "<<endl;
 		cin>>op;

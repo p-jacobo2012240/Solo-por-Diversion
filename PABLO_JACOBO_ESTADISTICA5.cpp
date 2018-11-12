@@ -14,6 +14,10 @@ float estadistica(){
 	int result;
 	int sum;
 	
+	cout<<"Carnet --> 9490-18-1319"<<endl;
+	cout<<"Nombre --> Pablo Daniel Jacobo Sanchez"<<endl;
+	cout<<"Seccion --> D"<<endl;
+	cout<<""<<endl;	
 	
 	for(int i=0; i<=29; i ++ ){
 		

@@ -20,6 +20,10 @@ float operativa(){
 
 	do{
 		
+		cout<<"Carnet --> 9490-18-1319"<<endl;
+		cout<<"Nombre --> Pablo Daniel Jacobo Sanchez"<<endl;
+		cout<<"Seccion --> D"<<endl;
+		cout<<""<<endl;	
 		cout<<"Seleccione por quien desea votar !!"<<endl;
 		cout<<" 1. Cndidato  A    "<<endl;
 		cout<<" 2. Candidato B    "<<endl;

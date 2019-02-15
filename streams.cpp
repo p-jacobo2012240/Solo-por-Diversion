@@ -11,7 +11,8 @@ int main(){
 	saludo.open("prueba.text");
 	
 	saludo<<"hola devs"<<endl;	
-	cout<<"Hola de nuevo"<<endl;
+	saludo<<"Hola de nuevo"<<endl;
+	saludo<<"Hola de nuevo x2"<<endl;
 	saludo.close();*/
 	
 	//Lectura

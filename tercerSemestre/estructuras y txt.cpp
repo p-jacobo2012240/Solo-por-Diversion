@@ -16,6 +16,8 @@ void listarPersonas();
 
 int main(){
 		
+		//Ref : http://www.cplusplus.com/doc/tutorial/files/
+		//Ejemplo hecho con <3 
 		cout<<"Hola DevSolitions"<<endl;
 		
 		/* INGRESAR PERSONAS */

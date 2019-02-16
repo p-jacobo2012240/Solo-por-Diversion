@@ -32,13 +32,11 @@ int main(){
 		
 		switch(op){
 			case 1 :
-				system("cls");
 				iniciar();
 				main();
 			break;
 			
 			case 2 :
-				system("cls");
 				leer();
 				main();
 			break;
@@ -53,7 +51,7 @@ int main(){
 
 void ingresarAlumnos(Alumnos alumno){
 	ofstream db;
-    db.open("hackobo.txt", ios::app);
+    db.open("hackobodb.txt", ios::app);
     db.write((char*)&alumno, sizeof(Alumnos));
     db.close();	
 }
@@ -75,15 +73,13 @@ Alumnos pedirAlumno(){
 
 void listarAlumnos(){
 	ifstream data;
-	data.open("hackobo.txt", ios::app);
+	data.open("hackobodb.txt", ios::app);
     Alumnos _al;
     
 	if(data.good()){
         while(data.read((char*)&_al,sizeof(Alumnos))){
         	int i;
         	i ++;
-        	cout<<""<<endl;
-			cout<<"-------------------"<<endl;
 			cout<<"id_alumno : "<< i <<endl;
 			cout<<"Nombre    : "<<_al.nombre<<endl;
 		    cout<<"Edad      : "<<_al.edad<<endl;

@@ -21,11 +21,11 @@ int main(){
 		cout<<"Hola DevSolitions"<<endl;
 		
 		/* INGRESAR PERSONAS */
- 		Persona p = leerPersona();
-		ingresarPersona(p);
+ 		//Persona p = leerPersona();
+		//ingresarPersona(p);
 		
 		/*LISTAR PERSONAS*/
-		//listarPersonas();
+		listarPersonas();
 		
 		return 0;	
 }

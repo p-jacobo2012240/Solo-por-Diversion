@@ -1,27 +1,56 @@
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
-float ingresar_nombre_edad(){
+int numeroVeces; 
+int *nVecesPuntero; 
+string array_nombres[100];
+
+float ingresoDatos(){
 	
-	int edad[100];
 	string nombre;
-	string array_nombres[100];
 	
 	int n_veces;
 	cout<<"Ingrese el numero de veces a ingresar"<<endl;
-	cin>>n_veces;
+	cin>>numeroVeces;
 	
-	for(int i; i <= n_veces ; i ++ ){
+	nVecesPuntero = new int[numeroVeces];
+	
+	for(int i; i <= numeroVeces; i ++ ){
 		cout<<"Id: "<< i <<endl;
 		cout<<"Ingresa la edad"<<endl;
-		cin>>edad[i];
+		cin>>nVecesPuntero[i];
 		cin.ignore();
 		cout<<"Ingresa el nombre"<<endl;
 		getline(cin, nombre);
 		
 		array_nombres[i] = nombre;
 	}
+}
+
+
+float mostrarDM(){
+
+	
+	for(int j; j<=numeroVeces; j ++ ){
+		cout<<"======  Datos del array   ============"<<endl;
+		cout<<"id: "<<j<<endl;
+		cout<<nVecesPuntero[j]<<endl;
+		cout<<array_nombres[j]<<endl;
+		cout<<""<<endl;			
+	}
+	
+	int *localVector;
+	localVector = nVecesPuntero;
+	
+	for(int i; i <=numeroVeces; i ++ ){
+		cout<<"======  Posiciones en memoria   ============"<<endl;
+		cout<<"id: "<<i<<endl;
+		cout<<"en memoria: " <<localVector<<endl;
+		localVector++; 
+	}
+	
 	
 	
 }
@@ -44,11 +73,11 @@ int main(){
 		
 		switch(op){
 			case 1:
-				ingresar_nombre_edad();
+				ingresoDatos();
 			break;
 			
 			case 2:
-				
+				mostrarDM();
 			break;
 			
 			case 3:
@@ -64,5 +93,7 @@ int main(){
 		}
 	}
 	return 0;
+	
+	delete[] nVecesPuntero;
 	
 }

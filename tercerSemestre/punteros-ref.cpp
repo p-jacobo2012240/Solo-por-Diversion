@@ -30,7 +30,7 @@ float ingresoDatos(){
 }
 
 
-float mostrarDM(){
+void mostrarDM(){
 
 	
 	for(int j; j<=numeroVeces; j ++ ){
@@ -44,15 +44,34 @@ float mostrarDM(){
 	int *localVector;
 	localVector = nVecesPuntero;
 	
+	string *strVector;
+	strVector = array_nombres;
+	
 	for(int i; i <=numeroVeces; i ++ ){
-		cout<<"======  Posiciones en memoria   ============"<<endl;
+		cout<<"======  Vector de punteros   ============"<<endl;
 		cout<<"id: "<<i<<endl;
-		cout<<"en memoria: " <<localVector<<endl;
-		localVector++; 
-	}
+		cout<<"en memoria edad   : " <<localVector<<endl;
+		cout<<"en memoria nombre : " <<strVector<<endl;
+		strVector++;
+	}	
+}
+
+void mostrarPuntero(){
 	
+		
+	int *xVector;
+	xVector = nVecesPuntero;
 	
+	string *strVector;
+	strVector = array_nombres;
 	
+	for(int i; i <=numeroVeces; i ++ ){
+		cout<<"======  Posiciones en memoria de cada elemento   ============"<<endl;
+		cout<<"id: "<<i<<endl;
+		cout<<"en memoria edad   : " <<xVector++<<endl;
+		cout<<"en memoria nombre : " <<strVector++<<endl;
+	}	
+
 }
 
 int main(){
@@ -81,11 +100,11 @@ int main(){
 			break;
 			
 			case 3:
-				
+				cout<<" :("<<endl;
 			break;
 			
 			case 4:
-				
+				mostrarPuntero();
 			break;
 			
 				default:

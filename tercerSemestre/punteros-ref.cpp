@@ -47,6 +47,10 @@ void mostrarDM(){
 	string *strVector;
 	strVector = array_nombres;
 	
+	/*string *nombres = &strVector;
+	string **nombress = &nombres;
+	string ***nombresss = &nombress;*/
+	
 	for(int i; i <=numeroVeces; i ++ ){
 		cout<<"======  Vector de punteros   ============"<<endl;
 		cout<<"id: "<<i<<endl;

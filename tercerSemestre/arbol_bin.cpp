@@ -100,12 +100,15 @@ void show(Nodo *arbol, int cont){
 	if(arbol == NULL ){
 		return;
 	}else{
-		show(arbol->derecha, cont +1 );
-		for(int i =0;i<cont;i++){
-			cout<<"   ";
-		}
-		cout<<arbol->dato<<endl;
-		show(arbol->izquierda, cont+1);
+		int x = 1;
+		if(x){
+			show(arbol->derecha, cont +1 );
+			for(int i =0;i<cont;i++){
+				cout<<"   ";
+			}
+			cout<<arbol->dato<<endl;
+			show(arbol->izquierda, cont+1);
+		}	
 	}
 }
 

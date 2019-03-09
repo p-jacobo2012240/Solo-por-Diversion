@@ -69,6 +69,18 @@ Nodo *crearNodo(int n ){
 	return nuevo_nodo;
 }
 
+/*void crearRaiz::insert(int dato){
+  if(nodo!=NULL)
+    insertarNodo(dato, root);
+  else
+  {
+    root = new node;
+    root->key_value=key;
+    root->left=NULL;
+    root->right=NULL;
+  }
+}*/
+
 void insertarNodo(Nodo *&arbol ,int n){
 	if(arbol == NULL){
 		Nodo *nuevo_nodo = crearNodo(n);

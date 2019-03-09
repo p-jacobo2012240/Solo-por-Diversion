@@ -88,10 +88,12 @@ void insertarNodo(Nodo *&arbol ,int n){
 		
 	}else{
 		int valorRaiz = arbol->dato;
-		if(n < valorRaiz){
-			insertarNodo(arbol->izquierda, n);
-		}else{
-			insertarNodo(arbol->derecha, n);
+		if(valorRaiz){
+			if(n < valorRaiz){
+				insertarNodo(arbol->izquierda, n);
+			}else{
+				insertarNodo(arbol->derecha, n);
+			}		
 		}
 	}
 }

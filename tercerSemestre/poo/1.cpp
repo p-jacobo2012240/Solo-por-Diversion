@@ -1,16 +1,28 @@
 #include <iostream>
 #include <stdio.h>
 #include <windows.h>
+#include <fstream>
 
 using namespace std;
 
-class Estudiantes{
+class Estudiantes {
 	public:
 		void vizualizar();
 		long numId;
 		char nombre[40];
 		int edad;
 };
+
+void serializableEst(Estudiantes es);
+
+void serializableEst(Estudiantes es){
+
+	ofstream db;
+    db.open("poo.txt", ios::app);
+    db.write((char*)&es, sizeof(Estudiantes));
+    db.close();	
+}
+
 
 void Estudiantes::vizualizar()
 {
@@ -33,6 +45,8 @@ void funcionObjeto(){
 	cout<<"Ingrese ID: "; cin>>Obj1.numId;
 	cout<<"Ingrese nombre: "; cin>>Obj1.nombre;
 	cout<<"Ingrese edad: "; cin>>Obj1.edad;
+	
+	serializableEst(Obj1);
 	
 	Obj1.vizualizar();
 	system("pause");

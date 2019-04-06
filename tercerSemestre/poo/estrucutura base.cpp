@@ -3,6 +3,7 @@
 using namespace std;
 
 //clase base para las demas
+//programa de salas de peliculas y cines
 
 class Salas{
 	public:

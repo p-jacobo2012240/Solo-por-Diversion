@@ -2,89 +2,87 @@
 
 using namespace std;
 
-class Salas{
+class Tipo{
 	public:
-		int numero_sala;
-		char  capacidad[30];
+	char nombre_tipo[30]; 
 };
 
 
-class Peliculas{
+class Vehiculo{
 	public:
-		char nombre_peli[30];
-		char  genero[30];
-		char  categoria[30];
-		Salas sala;
-		//Metodos
-		void ingresarPeliculas(int n);
+	int motor;
+	char placa[50];
+	int cantidad_pasajeros;
+	Tipo tipos;
+	//Metodos
+	void ingresarVehiculo(int q);
 };
 
 
-void Peliculas::ingresarPeliculas(int n ){
-	Peliculas p[n];
+void Vehiculo::ingresarVehiculo(int q){
+	Vehiculo v[q];
 	
-	for(int i = 0; i< n; i++ ){
-		
-		cout<<""<<endl;
-		
-		cout<<"Nombre peli :  "; 
-			cin>>p[i].nombre_peli;
-			cin.ignore();
-		cout<<"Genero   :   "; 
-			cin>>p[i].genero;
-			cin.ignore();
-		cout<<"Categoria :   "; 
-			cin>>p[i].categoria;
-			cin.ignore();
-		cout<<"Sala :: Capacidad : "; 
-			cin>>p[i].sala.capacidad;
-			cin.ignore();
-		cout<<"Sala :: Numero  :  "; 
-			cin>>p[i].sala.numero_sala;
-			cin.ignore();
+	for(int i = 0; i< q; i++ ){
+	
+	cout<<"Motor   :   "<<endl;
+		cin>>v[q].motor;
+		cin.ignore();
+	cout<<"placa   :   "<<endl; 
+		cin>>v[q].placa;
+		cin.ignore();
+	cout<<"capacidad:  "<<endl; 
+		cin>>v[q].cantidad_pasajeros;
+		cin.ignore();
+	cout<<"Tipo = Acuatico, Terrestre, Aereo, otro "<<endl;	
+	cout<<"Tipo Vehiculo: "<<endl;
+		cin>>v[q].tipos.nombre_tipo;
+		cin.ignore();
 	}
 	
-	for(int j = 0; j < n ; j ++  ){
+	for(int j = 0; j< q ; j++ ){
 		
 		cout<<"======================="<<endl;
-		cout<<"Genero:          "<<p[j].nombre_peli<<endl;
-		cout<<"Genero:          "<<p[j].genero<<endl;
-		cout<<"Genero:          "<<p[j].genero<<endl;
-		cout<<"Categorias:      "<<p[j].categoria<<endl;
-		cout<<"Capacidad salas: "<<p[j].sala.capacidad<<endl;
-		cout<<"Numero salas:    "<<p[j].sala.numero_sala<<endl;
+		cout<<"Motor:              "<<v[j].motor<<endl;
+		cout<<"Placa:              "<<v[j].placa<<endl;
+		cout<<"Capacidad:          "<<v[j].cantidad_pasajeros<<endl;
+		cout<<"Tipo Vehiculo:      "<<v[j].tipos.nombre_tipo<<endl;
 		cout<<"======================="<<endl;
+		
 	}
+	
+	
+		
+
 }
-
-
 
 int main(){
 	
-	int op = 0;
+	Vehiculo _vehiculo;
 	int dato = 0;
+	int op= 0;
 	
 	do{
+		
 		cout<<"|===============================|"<<endl;
-		cout<<"|         Peliculas APP         |"<<endl;
-		cout<<"|  1.   Ingresar Peliculas      |"<<endl;
+		cout<<"|         Transporte APP        |"<<endl;
+		cout<<"| 1.   Para acceder             |"<<endl;
 		cout<<"|===============================|"<<endl;
+		cout<<""<<endl;
 		cin>>op;
-		switch( op ){
-			
-			case 1:
-				Peliculas peli;
-				cout<<"Ingrese el numero de peliculas :)"<<endl;
-				cin>>dato;
-				if(dato) {
-					peli.ingresarPeliculas(dato);
-				}
-			break;
-	
-				default:
-					cout<<" :( invalida op "<<endl;			
+		if( op == 1  ){
+			cout<<"Ingrese el numero ve vehiculos a registrar :)"<<endl;
+			cin>>dato;
+			if(dato){
+				_vehiculo.ingresarVehiculo(dato);
+			}
 		}
 		
-	}while( op != 2  );
+		
+	}while( op !=2 );		
+	
+		
+	
+	
+	return 0;
 	
 }

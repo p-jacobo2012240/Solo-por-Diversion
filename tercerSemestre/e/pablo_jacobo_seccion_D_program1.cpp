@@ -47,8 +47,7 @@ void Peliculas::ingresarPeliculas(int n ){
 	for(int j = 0; j < n ; j ++  ){
 		
 		cout<<"======================="<<endl;
-		cout<<"Genero:          "<<p[j].nombre_peli<<endl;
-		cout<<"Genero:          "<<p[j].genero<<endl;
+		cout<<"Nombre peli:     "<<p[j].nombre_peli<<endl;
 		cout<<"Genero:          "<<p[j].genero<<endl;
 		cout<<"Categorias:      "<<p[j].categoria<<endl;
 		cout<<"Capacidad salas: "<<p[j].sala.capacidad<<endl;

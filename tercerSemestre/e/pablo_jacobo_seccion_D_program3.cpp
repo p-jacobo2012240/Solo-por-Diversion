@@ -15,73 +15,70 @@ class Animal{
 	int  cant_patas;
 	Tipo tipos;
 	//Metodos
-	void ingresarAnimal(int f);
+	void ingresarAnimal(int n);
 };
 
-
-void Animal::ingresarAnimal(int f){
-	Animal a[f];
+void Animal:: ingresarAnimal(int n ){
+	Animal a[n];
 	
-	for(int i = 0; i< f; i++ ){
-	
-	cout<<"nombre   :   "<<endl;
-		cin>>a[f].nombre;
-		cin.ignore();
-	cout<<"colores   :   "<<endl; 
-		cin>>a[f].color;
-		cin.ignore();
-	cout<<"cantidad_patas:  "<<endl; 
-		cin>>a[f].cant_patas;
-		cin.ignore();
-	cout<<"vertebrado/ invertebrado: "<<endl;
-		cin>>a[f].tipos.nombre_tipo;
-		cin.ignore();
+	for(int i = 0; i< n; i++ ){
+		
+		cout<<""<<endl;
+		
+		cout<<"Nombre  :  "; 
+			cin>>a[i].nombre;
+			cin.ignore();
+		cout<<"Color   :   "; 
+			cin>>a[i].color;
+			cin.ignore();
+		cout<<"Cantidad Patas : "; 
+			cin>>a[i].cant_patas;
+			cin.ignore();
+		cout<<"Tipo Animal :  "; 
+			cin>>a[i].tipos.nombre_tipo;
+			cin.ignore();
 	}
 	
-	for(int j = 0; j< f ; j++ ){
+	for(int j = 0; j < n ; j ++  ){
 		
 		cout<<"======================="<<endl;
-		cout<<"Nombre:               "<<a[j].nombre<<endl;
-		cout<<"Colores:              "<<a[j].color<<endl;
-		cout<<"Cantidad_patas:       "<<a[j].cant_patas<<endl;
-		cout<<"Tipo Animal:          "<<a[j].tipos.nombre_tipo<<endl;
+		cout<<"Nombre             :          "<<a[j].nombre<<endl;
+		cout<<"Color              :          "<<a[j].color<<endl;
+		cout<<"Cantidad patas     :          "<<a[j].cant_patas<<endl;
+		cout<<"Tipo               :          "<<a[j].tipos.nombre_tipo<<endl;
 		cout<<"======================="<<endl;
-		
 	}
-	
-	
-		
-
 }
+
+
 
 int main(){
 	
-	Animal ani;
+	int op = 0;
 	int dato = 0;
-	int op= 0;
 	
 	do{
-		
 		cout<<"|===============================|"<<endl;
 		cout<<"|         Animales APP          |"<<endl;
-		cout<<"|    1.   Para Iniciar          |"<<endl;
+		cout<<"|  1.   Ingresar Animales       |"<<endl;
 		cout<<"|===============================|"<<endl;
-		cout<<""<<endl;
 		cin>>op;
-		if( op == 1  ){
-			cout<<"Ingrese el numero ve vehiculos a registrar :)"<<endl;
-			cin>>dato;
-			if(dato){
-				ani.ingresarAnimal( dato );
-			}
+		switch( op ){
+			
+			case 1:
+				Animal _animalitos;
+				cout<<"Ingrese el numero de Animales :)"<<endl;
+				cin>>dato;
+				if(dato) {
+					_animalitos.ingresarAnimal(dato);
+				}
+			break;
+	
+				default:
+					cout<<" :( invalida op "<<endl;			
 		}
 		
-		
-	}while( op !=2 );		
-	
-		
-	
-	
-	return 0;
+	}while( op != 2  );
 	
 }
+

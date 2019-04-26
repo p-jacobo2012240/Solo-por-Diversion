@@ -46,6 +46,6 @@ void init(){
 void insertObj(Hck hck, string path, string ext ){
 	ofstream db;
     db.open("hackobodb.txt" , ios::app);
-    db.write((char*)&alumno, sizeof(Alumnos));
+    db.write((char*)&hck, sizeof(Hck));
     db.close();	
 }*/

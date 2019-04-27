@@ -8,11 +8,13 @@ using namespace std;
 class Hck{
 	public:
 		char nombre[30];
+		string path;
+		string ext;
 		
 };
 
 
-void insertObj(Hck hck, string path, string ext ); //Handler method
+void insertObj(Hck hck); //Handler method
 Hck requireHck();
 void init();
 
@@ -36,16 +38,32 @@ int main(){
 }
 
 void init(){
-	Hck objHck;
 	
-	objHck = requireHck();
-	insertObj(objHck);
+	Hck obj = requireHck();
+	insertObj(obj);
 }
 
 
-void insertObj(Hck hck, string path, string ext ){
+void insertObj(Hck hck){
 	ofstream db;
-    db.open("hackobodb.txt" , ios::app);
+	
+    db.open("hackobodb.dxs", ios::app);
     db.write((char*)&hck, sizeof(Hck));
     db.close();	
-}*/
+}
+
+
+Hck insertObj(){
+	Hck _h;
+	
+	cin.ignore();
+	cout<<"Nombre   : "<<endl;
+    cin.getline(_h.nombre,30);
+    cout<<"Extension     : "<<endl;
+    cin>>_h.ext;
+    cin.ignore();
+    cout<<"Ruta   : "<<endl;
+    cin>>_h.path;
+	
+	return _h;
+}

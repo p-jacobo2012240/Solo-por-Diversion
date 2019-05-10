@@ -29,6 +29,7 @@ int main(){
 	
 	Persona unaPersona(n,e,g);
 	
+	//cout<<"la info es"<<unaPersona.Persona();
 	
 	
 	//cout<<"hola constructores"<<endl;

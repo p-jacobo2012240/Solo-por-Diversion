@@ -36,6 +36,17 @@ int main(){
 		cout<<"| 2. Impresion pantalla   |"<<endl;
 		cout<<"| 3. Ticket               |"<<endl;
 		cout<<"==========================="<<endl;
+		switch(){
+			
+			case 1:
+			break;
+			
+			case 2:
+			break;
+			
+			case 3:
+			break;
+		}
 		
 	}while(op != MAX );
 	

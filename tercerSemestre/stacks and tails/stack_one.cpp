@@ -44,7 +44,7 @@ int main(){
 	for(int i= 0; i<opt; i++){
 		
 	
-		cout<<"Added your number favorite"<<endl;
+		cout<<"Add your favorite number"<<endl;
 		cin>>n;
 		
 		instenceCount.addStack( stack, n );

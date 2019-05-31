@@ -52,8 +52,11 @@ int main(){
 	
 	
 	while( stack != NULL ){
-		cout<<"::: fixes  :::"<<endl;
+		//cout<<"::: debugger  :::"<<endl;
 		instenceCount.showStack(stack, n);
+		if(stack != NULL){
+			cout<<" "<< n <<" ";
+		}
 	}
 	
 	

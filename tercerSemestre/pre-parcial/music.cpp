@@ -25,7 +25,7 @@ class Music{
 void serializableEst(Music _music){
 
 	ofstream db;
-    db.open("wip.txt", ios::app);
+    db.open("wip.sal", ios::app);
     db.write((char*)&_music, sizeof(Music));
     db.close();	
 }
@@ -88,7 +88,7 @@ void Music::insertMusic(){
 void Music::listarMusic(){
 	
 	ifstream data;
-	data.open("wip.txt", ios::app);
+	data.open("wip.sal", ios::app);
     Music _mus;
     
     //cout<<"llegaste aqui"<<endl;

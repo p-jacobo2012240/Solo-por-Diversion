@@ -8,14 +8,6 @@ void ingreso();
 void mostrar();
 
 
-/*
-archivo
-https://github.com/p-jacobo2012240/Solo-por-Diversion/blob/master/tercerSemestre/pre-parcial/music.cpp
-
-constructor
-https://github.com/p-jacobo2012240/Solo-por-Diversion/blob/master/tercerSemestre/constructores/1.cpp
-
-*/
 class Tipo{
 	public:
 		string tipo_nombre; //sin hijos, para mayores de edad
@@ -33,10 +25,10 @@ class Habitacion{
 		int cantidad_camas;
 		Tipo tipo;
 		//constructor
-		Habitacion(string n_h, int c_c, Tipo t   ){
+		Habitacion(string n_h, int c_c, Tipo tipo   ){
 			nombre_habitacion = n_h;
 			cantidad_camas = c_c;
-			tipo = t;
+			tipo = tipo;
 		}
 		
 };
@@ -50,12 +42,12 @@ class Persona{
 		bool tiene_hijos;
 		Habitacion habitacion;
 		//constructor
-		Persona(string n_p, string a_p, int e, bool hijos, Habitacion hab ){
+		Persona(string n_p, string a_p, int e, bool hijos, Habitacion habitacion){
 			nombre_persona = n_p;
 			apellido_persona = a_p;
 			edad = e;
 			tiene_hijos = hijos;
-			habitacion hab;
+			habitacion = habitacion;
 		}
 };
 
@@ -88,23 +80,14 @@ int main(){
 		
 		
 		
-	}while( op != LIMIT );
+	}while( op != LIMITE   );
 	
 }
 
 
 void ingreso(){
 	
-	Tipo obj1, obj2, obj3 ;
 	
-	obj1.tipo_nombre = "clase 1    ";
-	obj2.tipo_nombre = " clase 2   ";
-	obj3.ti	tipo_nombre =  " clase 3";
-	
-	
-	cout<<"Que desea ingresar"<<endl;
-	cout<<" 1. Habataciones  "<<endl;
-	cout<<" 2. Usuarios      "<<endl;	
 	
 	
 	cout<<"ingrese las habitaciones"<<endl;
